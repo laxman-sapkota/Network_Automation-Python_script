@@ -15,6 +15,7 @@ def enablemode():
     # Enter enable mode
     session.sendline('enable')
     result=session.expect(['Password:', pexpect.TIMEOUT])
+
     # Check for error, if so then print error and exit
     if result !=0:
         print('Failure! There has been a problem with entering enable mode please look at your code and try again')
